@@ -91,14 +91,6 @@ Now connect sonarr and radarr to bazarr:
 - Hostname/IP Adress: `sonarr` or `radarr`
 - API: can be found `Settings -> General` in `sonarr` or `radarr`
 
-# FRONTEND:
-
-- https://reactjs.org/
-
-API:
-
-- https://fastapi.tiangolo.com/
-
 # Sonarr, Lidarr, Bazarr
 
 https://sdekraa.tweakblogs.net/blog/18708/docker-compose-voor-het-configureren-van-je-docker-applicaties
