@@ -91,6 +91,22 @@ Now connect sonarr and radarr to bazarr:
 - Hostname/IP Adress: `sonarr` or `radarr`
 - API: can be found `Settings -> General` in `sonarr` or `radarr`
 
+# Nginx
+If you want to use nginx as a reverse proxy, just add this as a container (within the same network).
+Then create an nginx.conf pointing to the docker containers adresses (i.e. http://sonarr/sonarr) but you'll have to change the `URL Base`/`URL Prefix` as well in the different containers.
+
+Then in de [docker-compose.torrent-stack.yaml](docker-compose.torrent-stack.yaml) change the:
+```
+ports:
+  - 8989:8989
+```
+to
+```
+expose:
+  - 8989
+```
+for security reasons.
+
 # Sonarr, Lidarr, Bazarr
 
 https://sdekraa.tweakblogs.net/blog/18708/docker-compose-voor-het-configureren-van-je-docker-applicaties
